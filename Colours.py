@@ -65,7 +65,7 @@ def colour(string: str, *colors: str) -> None:
     return os.system('echo ' + colored_string + palette['default']['default'])
 
 print("=" * 100)
-colour("Custom API: $f$C$f$o$f$l$f$o$f$u$f$r$f$s$f$.", "Light_red", "yellow", "light_yellow", "light_green", "light_cyan", "light_blue", "light_magenta", "white")
+colour("Custom: $f$C$f$o$f$l$f$o$f$u$f$r$f$s$f$.", "Light_red", "yellow", "light_yellow", "light_green", "light_cyan", "light_blue", "light_magenta", "white")
 print("=" * 100)
 if __name__ == '__main__':
     pass
