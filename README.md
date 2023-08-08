@@ -1,6 +1,6 @@
 # Colours
 
-> Custom API
+> Custom
 > 
 # Usage
 ```python
