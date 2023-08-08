@@ -48,6 +48,7 @@ palette = {
 }
 
 def colour(string: str, *colors: str) -> None:
+    colors = list(map(lambda x: x.lower(), colors))
     result = []
     lookahead = re.compile(r'\$[dbf]\$', re.I | re.M)
     matches = lookahead.finditer(string)
@@ -61,10 +62,10 @@ def colour(string: str, *colors: str) -> None:
         prev_end = end
     result.append(string[prev_end:])
     colored_string = ''.join(result)
-    return os.system('echo' + colored_string + palette['default']['default'])
+    return os.system('echo ' + colored_string + palette['default']['default'])
 
 print("=" * 100)
-colour("\tCustom API: $f$C$f$o$f$l$f$o$f$u$f$r$f$s$f$.", "light_red", "yellow", "light_yellow", "light_green", "light_cyan", "light_blue", "light_magenta", "white")
+colour("Custom API: $f$C$f$o$f$l$f$o$f$u$f$r$f$s$f$.", "Light_red", "yellow", "light_yellow", "light_green", "light_cyan", "light_blue", "light_magenta", "white")
 print("=" * 100)
 if __name__ == '__main__':
     pass
